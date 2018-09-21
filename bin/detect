@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
-echo "heroku-buildpack-node-cleanup"
+echo "Running nuke-node-modules-zpkj-buildpack..."
+echo "Removing unnecessary node_modules packages"
 exit 0
