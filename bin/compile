@@ -15,10 +15,12 @@ echo $CACHE_DIR
 
 echo "ENV_DIR"
 echo $ENV_DIR
-ls $ENV_DIR
 
 echo "ORIGINAL_DIR"
 echo $ORIGINAL_DIR
+
+echo "NODE_MODULES_PATH"
+echo $NODE_MODULES_PATH
 
 echo "PROTECTED_DIR"
 echo $PROTECTED_DIR
