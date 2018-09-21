@@ -2,12 +2,12 @@
 
 ORIGINAL_DIR=$(pwd)
 BUILD_DIR=$1
+CACHE_DIR=$2
+ENV_DIR=$3
 NODE_MODULES_PATH=$BUILD_DIR"/node_modules"
 ROTECTED_DIR=`cat $ENV_DIR/NODE_MODULES_PROTECTED_DIR`
 
 echo "-----> Deleting the node_modules folder (except $PROTECTED_DIR)..."
-# echo $BUILD_DIR
-# ls $NODE_MODULES_PATH | grep -v "@zapakuj-to" | xargs rm -rfv
 cd $NODE_MODULES_PATH
 ls | grep -v "$PROTECTED_DIR" | xargs rm -rf
 cd $ORIGINAL_DIR
