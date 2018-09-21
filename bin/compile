@@ -5,7 +5,7 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 ENV_DIR=$3
 NODE_MODULES_PATH=$BUILD_DIR"/node_modules"
-ROTECTED_DIR=`cat $ENV_DIR/NODE_MODULES_PROTECTED_DIR`
+PROTECTED_DIR=$(cat $ENV_DIR/NODE_MODULES_PROTECTED_DIR)
 
 echo "BUILD_DIR"
 echo $BUILD_DIR
@@ -19,6 +19,9 @@ ls $ENV_DIR
 
 echo "ORIGINAL_DIR"
 echo $ORIGINAL_DIR
+
+echo "PROTECTED_DIR"
+echo $PROTECTED_DIR
 
 # echo "-----> Deleting the node_modules folder (except $PROTECTED_DIR)..."
 # cd $NODE_MODULES_PATH
