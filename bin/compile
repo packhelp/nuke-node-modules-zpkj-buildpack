@@ -15,6 +15,7 @@ echo $CACHE_DIR
 
 echo "ENV_DIR"
 echo $ENV_DIR
+ls $ENV_DIR
 
 echo "ORIGINAL_DIR"
 echo $ORIGINAL_DIR
