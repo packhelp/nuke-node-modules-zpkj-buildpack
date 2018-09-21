@@ -7,8 +7,20 @@ ENV_DIR=$3
 NODE_MODULES_PATH=$BUILD_DIR"/node_modules"
 ROTECTED_DIR=`cat $ENV_DIR/NODE_MODULES_PROTECTED_DIR`
 
-echo "-----> Deleting the node_modules folder (except $PROTECTED_DIR)..."
-cd $NODE_MODULES_PATH
-ls | grep -v "$PROTECTED_DIR" | xargs rm -rf
-cd $ORIGINAL_DIR
-echo "       Done!"
+echo "BUILD_DIR"
+echo $BUILD_DIR
+
+echo "CACHE_DIR"
+echo $CACHE_DIR
+
+echo "ENV_DIR"
+echo $ENV_DIR
+
+echo "ORIGINAL_DIR"
+echo $ORIGINAL_DIR
+
+# echo "-----> Deleting the node_modules folder (except $PROTECTED_DIR)..."
+# cd $NODE_MODULES_PATH
+# ls | grep -v "$PROTECTED_DIR" | xargs rm -rf
+# cd $ORIGINAL_DIR
+# echo "       Done!"
