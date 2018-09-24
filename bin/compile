@@ -31,7 +31,4 @@ cd $NODE_MODULES_PATH
 ls | grep -v "$PROTECTED_DIR" | xargs rm -rf
 cd $ORIGINAL_DIR
 
-echo "-----> Deleting the tmp/cache folder..."
-rm -rf $BUILD_DIR/cache
-
 echo "       Done!"
