@@ -25,9 +25,15 @@ echo $NODE_MODULES_PATH
 echo "PROTECTED_DIR"
 echo $PROTECTED_DIR
 
-
 echo "-----> Deleting the node_modules folder (except $PROTECTED_DIR)..."
 cd $NODE_MODULES_PATH
+
+if [ "$ORIGINAL_DIR" == "$(pwd)" ]
+then
+  echo "Incorrect working directory, exiting.."
+  exit 1
+fi
+
 ls | grep -v "$PROTECTED_DIR" | xargs rm -rf
 cd $ORIGINAL_DIR
 
